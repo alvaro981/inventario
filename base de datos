@@ -16,12 +16,6 @@ CREATE TABLE usuario
     foreign key(codCentro) references centro(idCentro)
 );
 
-CREATE TABLE producto
-(
-	idproducto int primary key auto_increment,
-	area varchar(45) not null
-);
-
 CREATE TABLE centro(
 idCentro int primary key auto_increment,
 nomCentro varchar(30) not null
@@ -32,6 +26,414 @@ idRol int primary key auto_increment,
 nomRol varchar(11) not null
 );
 
+create table HojaGeneral
+(
+    idCamara int primary key auto_increment,
+	nomarea varchar(45) not null,
+    conseBien varchar(20) not null,
+    descriBien1 varchar(40) not null,
+    descriBien2 varchar(40) not null,
+    placaInven varchar(30) not null,
+    seria varchar(30) not null,
+    modelo varchar(30) not null,
+    marca varchar(20) not null,
+    cantidad varchar(2) not null,
+    valorAdqui varchar(15) not null,
+    verifiBien varchar(16) not null,
+    estadoUso varchar(10) not null,
+    observacion varchar(25) not null
+);
+
+CREATE TABLE AccesPoint
+(
+	idproducto int primary key auto_increment,
+	nomarea varchar(45) not null,
+    conseBien varchar(20) not null,
+    descriBien1 varchar(40) not null,
+    descriBien2 varchar(40) not null,
+    placaInven varchar(30) not null,
+    seria varchar(30) not null,
+    modelo varchar(30) not null,
+    marca varchar(20) not null,
+    cantidad varchar(2) not null,
+    valorAdqui varchar(15) not null,
+    verifiBien varchar(16) not null,
+    estadoUso varchar(10) not null,
+    observacion varchar(25) not null,
+    mac varchar(25) not null
+);
+
+CREATE TABLE telefonos
+(
+    idTelefono int primary key auto_increment,
+	nomarea varchar(45) not null,
+    descriBien varchar(40) not null,
+    ext varchar(20) not null,
+	seria varchar(30) not null,
+	mac varchar(25) not null,
+	marca varchar(20) not null,
+	observacion varchar(25) not null
+);
+
+CREATE TABLE AceleradorTrafico
+(
+    idacelerador int primary key auto_increment,
+	nomarea varchar(45) not null,
+    conseBien varchar(20) not null,
+    descriBien1 varchar(40) not null,
+    descriBien2 varchar(40) not null,
+    placaInven varchar(30) not null,
+    seria varchar(30) not null,
+    modelo varchar(30) not null,
+    marca varchar(20) not null,
+    cantidad varchar(2) not null,
+    valorAdqui varchar(15) not null,
+    verifiBien varchar(16) not null,
+    estadoUso varchar(10) not null,
+    observacion varchar(25) not null
+);
+
+create table aireAcondicionado
+(
+    idaire int primary key auto_increment,
+	nomarea varchar(45) not null,
+    conseBien varchar(20) not null,
+    descriBien1 varchar(40) not null,
+    descriBien2 varchar(40) not null,
+    placaInven varchar(30) not null,
+    seria varchar(30) not null,
+    modelo varchar(30) not null,
+    marca varchar(20) not null,
+    cantidad varchar(2) not null,
+    valorAdqui varchar(15) not null,
+    verifiBien varchar(16) not null,
+    estadoUso varchar(10) not null,
+    observacion varchar(25) not null
+);
+
+create table Apuntadores
+(
+    idapuntadores int primary key auto_increment,
+	nomarea varchar(45) not null,
+    conseBien varchar(20) not null,
+    descriBien1 varchar(40) not null,
+    descriBien2 varchar(40) not null,
+    placaInven varchar(30) not null,
+    seria varchar(30) not null,
+    modelo varchar(30) not null,
+    marca varchar(20) not null,
+    cantidad varchar(2) not null,
+    valorAdqui varchar(15) not null,
+    verifiBien varchar(16) not null,
+    estadoUso varchar(10) not null,
+    observacion varchar(25) not null
+);
+
+create table BancoBateria
+(
+    idBanco int primary key auto_increment,
+	nomarea varchar(45) not null,
+    conseBien varchar(20) not null,
+    descriBien1 varchar(40) not null,
+    descriBien2 varchar(40) not null,
+    placaInven varchar(30) not null,
+    seria varchar(30) not null,
+    modelo varchar(30) not null,
+    marca varchar(20) not null,
+    cantidad varchar(2) not null,
+    valorAdqui varchar(15) not null,
+    verifiBien varchar(16) not null,
+    estadoUso varchar(10) not null,
+    observacion varchar(25) not null
+);
+
+create table Camara
+(
+    idCamara int primary key auto_increment,
+	nomarea varchar(45) not null,
+    conseBien varchar(20) not null,
+    descriBien1 varchar(40) not null,
+    descriBien2 varchar(40) not null,
+    placaInven varchar(30) not null,
+    seria varchar(30) not null,
+    modelo varchar(30) not null,
+    marca varchar(20) not null,
+    cantidad varchar(2) not null,
+    valorAdqui varchar(15) not null,
+    verifiBien varchar(16) not null,
+    estadoUso varchar(10) not null,
+    observacion varchar(25) not null
+);
+
+create table Controlador
+(
+    idControlador int primary key auto_increment,
+	nomarea varchar(45) not null,
+    conseBien varchar(20) not null,
+    descriBien1 varchar(40) not null,
+    descriBien2 varchar(40) not null,
+    placaInven varchar(30) not null,
+    seria varchar(30) not null,
+    modelo varchar(30) not null,
+    marca varchar(20) not null,
+    cantidad varchar(2) not null,
+    valorAdqui varchar(15) not null,
+    verifiBien varchar(16) not null,
+    estadoUso varchar(10) not null,
+    observacion varchar(25) not null
+);
+
+create table Conversor
+(
+    idConversor int primary key auto_increment,
+	nomarea varchar(45) not null,
+    conseBien varchar(20) not null,
+    descriBien1 varchar(40) not null,
+    descriBien2 varchar(40) not null,
+    placaInven varchar(30) not null,
+    seria varchar(30) not null,
+    modelo varchar(30) not null,
+    marca varchar(20) not null,
+    cantidad varchar(2) not null,
+    valorAdqui varchar(15) not null,
+    verifiBien varchar(16) not null,
+    estadoUso varchar(10) not null,
+    observacion varchar(25) not null
+);
+
+create table Gabinete
+(
+    idGabinete int primary key auto_increment,
+	nomarea varchar(45) not null,
+    conseBien varchar(20) not null,
+    descriBien1 varchar(40) not null,
+    descriBien2 varchar(40) not null,
+    placaInven varchar(30) not null,
+    seria varchar(30) not null,
+    modelo varchar(30) not null,
+    marca varchar(20) not null,
+    cantidad varchar(2) not null,
+    valorAdqui varchar(15) not null,
+    verifiBien varchar(16) not null,
+    estadoUso varchar(10) not null,
+    observacion varchar(25) not null
+);
+
+create table MezcladorImagen
+(
+    idMezclador int primary key auto_increment,
+	nomarea varchar(45) not null,
+    conseBien varchar(20) not null,
+    descriBien1 varchar(40) not null,
+    descriBien2 varchar(40) not null,
+    placaInven varchar(30) not null,
+    seria varchar(30) not null,
+    modelo varchar(30) not null,
+    marca varchar(20) not null,
+    cantidad varchar(2) not null,
+    valorAdqui varchar(15) not null,
+    verifiBien varchar(16) not null,
+    estadoUso varchar(10) not null,
+    observacion varchar(25) not null
+);
+
+create table Microfono
+(
+    idMicrofono int primary key auto_increment,
+	nomarea varchar(45) not null,
+    conseBien varchar(20) not null,
+    descriBien1 varchar(40) not null,
+    descriBien2 varchar(40) not null,
+    placaInven varchar(30) not null,
+    seria varchar(30) not null,
+    modelo varchar(30) not null,
+    marca varchar(20) not null,
+    cantidad varchar(2) not null,
+    valorAdqui varchar(15) not null,
+    verifiBien varchar(16) not null,
+    estadoUso varchar(10) not null,
+    observacion varchar(25) not null
+);
+
+create table Parlante
+(
+    idParlante int primary key auto_increment,
+	nomarea varchar(45) not null,
+    conseBien varchar(20) not null,
+    descriBien1 varchar(40) not null,
+    descriBien2 varchar(40) not null,
+    placaInven varchar(30) not null,
+    seria varchar(30) not null,
+    modelo varchar(30) not null,
+    marca varchar(20) not null,
+    cantidad varchar(2) not null,
+    valorAdqui varchar(15) not null,
+    verifiBien varchar(16) not null,
+    estadoUso varchar(10) not null,
+    observacion varchar(25) not null
+);
+
+create table Rack
+(
+    idRack int primary key auto_increment,
+	nomarea varchar(45) not null,
+    conseBien varchar(20) not null,
+    descriBien1 varchar(40) not null,
+    descriBien2 varchar(40) not null,
+    placaInven varchar(30) not null,
+    seria varchar(30) not null,
+    modelo varchar(30) not null,
+    marca varchar(20) not null,
+    cantidad varchar(2) not null,
+    valorAdqui varchar(15) not null,
+    verifiBien varchar(16) not null,
+    estadoUso varchar(10) not null,
+    observacion varchar(25) not null
+);
+
+create table Router
+(
+    idRouter int primary key auto_increment,
+	nomarea varchar(45) not null,
+    conseBien varchar(20) not null,
+    descriBien1 varchar(40) not null,
+    descriBien2 varchar(40) not null,
+    placaInven varchar(30) not null,
+    seria varchar(30) not null,
+    modelo varchar(30) not null,
+    marca varchar(20) not null,
+    cantidad varchar(2) not null,
+    valorAdqui varchar(15) not null,
+    verifiBien varchar(16) not null,
+    estadoUso varchar(10) not null,
+    observacion varchar(25) not null
+);
+
+create table Switch
+(
+    idSwitch int primary key auto_increment,
+	nomarea varchar(45) not null,
+    conseBien varchar(20) not null,
+    descriBien1 varchar(40) not null,
+    descriBien2 varchar(40) not null,
+    placaInven varchar(30) not null,
+    seria varchar(30) not null,
+    modelo varchar(30) not null,
+    marca varchar(20) not null,
+    cantidad varchar(2) not null,
+    valorAdqui varchar(15) not null,
+    verifiBien varchar(16) not null,
+    estadoUso varchar(10) not null,
+    observacion varchar(25) not null
+);
+
+create table Tablero
+(
+    idTablero int primary key auto_increment,
+	nomarea varchar(45) not null,
+    conseBien varchar(20) not null,
+    descriBien1 varchar(40) not null,
+    descriBien2 varchar(40) not null,
+    placaInven varchar(30) not null,
+    seria varchar(30) not null,
+    modelo varchar(30) not null,
+    marca varchar(20) not null,
+    cantidad varchar(2) not null,
+    valorAdqui varchar(15) not null,
+    verifiBien varchar(16) not null,
+    estadoUso varchar(10) not null,
+    observacion varchar(25) not null
+);
+
+create table TarjertasDatos
+(
+    idTarjertas int primary key auto_increment,
+	nomarea varchar(45) not null,
+    conseBien varchar(20) not null,
+    descriBien1 varchar(40) not null,
+    descriBien2 varchar(40) not null,
+    placaInven varchar(30) not null,
+    seria varchar(30) not null,
+    modelo varchar(30) not null,
+    marca varchar(20) not null,
+    cantidad varchar(2) not null,
+    valorAdqui varchar(15) not null,
+    verifiBien varchar(16) not null,
+    estadoUso varchar(10) not null,
+    observacion varchar(25) not null
+);
+
+create table Televisor
+(
+    idTelevisor int primary key auto_increment,
+	nomarea varchar(45) not null,
+    conseBien varchar(20) not null,
+    descriBien1 varchar(40) not null,
+    descriBien2 varchar(40) not null,
+    placaInven varchar(30) not null,
+    seria varchar(30) not null,
+    modelo varchar(30) not null,
+    marca varchar(20) not null,
+    cantidad varchar(2) not null,
+    valorAdqui varchar(15) not null,
+    verifiBien varchar(16) not null,
+    estadoUso varchar(10) not null,
+    observacion varchar(25) not null
+);
+
+create table Telon
+(
+    idTelon int primary key auto_increment,
+	nomarea varchar(45) not null,
+    conseBien varchar(20) not null,
+    descriBien1 varchar(40) not null,
+    descriBien2 varchar(40) not null,
+    placaInven varchar(30) not null,
+    seria varchar(30) not null,
+    modelo varchar(30) not null,
+    marca varchar(20) not null,
+    cantidad varchar(2) not null,
+    valorAdqui varchar(15) not null,
+    verifiBien varchar(16) not null,
+    estadoUso varchar(10) not null,
+    observacion varchar(25) not null
+);
+
+create table Ups
+(
+    idUps int primary key auto_increment,
+	nomarea varchar(45) not null,
+    conseBien varchar(20) not null,
+    descriBien1 varchar(40) not null,
+    descriBien2 varchar(40) not null,
+    placaInven varchar(30) not null,
+    seria varchar(30) not null,
+    modelo varchar(30) not null,
+    marca varchar(20) not null,
+    cantidad varchar(2) not null,
+    valorAdqui varchar(15) not null,
+    verifiBien varchar(16) not null,
+    estadoUso varchar(10) not null,
+    observacion varchar(25) not null
+);
+
+create table VideoBean
+(
+    idVideoBean int primary key auto_increment,
+	nomarea varchar(45) not null,
+    conseBien varchar(20) not null,
+    descriBien1 varchar(40) not null,
+    descriBien2 varchar(40) not null,
+    placaInven varchar(30) not null,
+    seria varchar(30) not null,
+    modelo varchar(30) not null,
+    marca varchar(20) not null,
+    cantidad varchar(2) not null,
+    valorAdqui varchar(15) not null,
+    verifiBien varchar(16) not null,
+    estadoUso varchar(10) not null,
+    observacion varchar(25) not null
+);
 -------------------------------------------
 CREATE VIEW Login 
 AS 
