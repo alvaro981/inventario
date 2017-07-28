@@ -1,0 +1,35 @@
+CREATE DATABASE inventario;
+USE inventario;
+
+CREATE TABLE usuario
+(
+	idUsuario int primary key auto_increment,
+	nombreUsu varchar(50) not null,
+	usuario varchar(20) not null,
+	clave varchar(80) not null,
+	codRol int,
+    codCentro int,
+	telefono char(7) null,
+	celular char(10) not null,
+	correo varchar(20) not null,
+	foreign key(codRol) references rol(idRol),
+    foreign key(codCentro) references centro(idCentro)
+);
+
+CREATE TABLE centro(
+idCentro int primary key auto_increment,
+nomCentro varchar(30) not null
+);
+
+CREATE TABLE rol(
+idRol int primary key auto_increment,
+nomRol varchar(11) not null
+);
+
+-------------------------------------------
+CREATE VIEW Login 
+AS 
+Select *
+FROM usuario;
+insert into centro(nomCentro)values('Electrica'),('Electronica');
+insert into rol(nomRol)values('Encargado'),('Instructor'),('Aprendiz');
