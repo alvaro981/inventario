@@ -422,7 +422,7 @@ create table Ups
 create table VideoBean
 (
     idVideoBean int primary key auto_increment,
-	nomarea varchar(45) not null,
+    nomarea varchar(45) not null,
     conseBien varchar(20) not null,
     descriBien1 varchar(40) not null,
     descriBien2 varchar(40) not null,
@@ -442,4 +442,4 @@ AS
 Select *
 FROM usuario;
 insert into centro(nomCentro)values('Electrica'),('Electronica');
-insert into rol(nomRol)values('Encargado'),('Instructor'),('Aprendiz');
+insert into rol(nomRol)values('Encargado'),('Instructor');
