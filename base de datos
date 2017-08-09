@@ -436,6 +436,9 @@ create table VideoBean
     estadoUso varchar(10) not null,
     observacion varchar(25) not null
 );
+ alter table usuario add fecha date not null;
+ alter table usuario add genero varchar (15) not null;
+ alter table usuario add foto longblob not null;
 -------------------------------------------
 CREATE VIEW Login 
 AS 
