@@ -450,3 +450,4 @@ Select *
 FROM usuario;
 insert into centro(nomCentro)values('Electrica'),('Electronica');
 insert into rol(nomRol)values('Encargado'),('Instructor');
+insert into genero(nomGenero)values('Masculino'),('Femenino'),('Otro');
